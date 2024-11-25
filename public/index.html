@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-link active">Funcionários</a>
+            <a href="/equipes.html" class="nav-link">Equipes</a>
+            <a href="/curriculos.html" class="nav-link">Currículos</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cadastro de Funcionários</h1>
+        </header>
+
+        <form id="funcionarioForm">
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="equipe">Equipe:</label>
+                <select id="equipe" required>
+                    <option value="">Selecione uma equipe</option>
+                    <option value="desenvolvimento">Desenvolvimento</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+
+            <button type="submit">Cadastrar Funcionário</button>
+        </form>
+
+        <div class="lista-funcionarios">
+            <h2>Funcionários Cadastrados</h2>
+            <div id="funcionariosList" class="funcionarios-grid">
+                <!-- Lista de funcionários será inserida aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Equipes</title>
+    <link rel="stylesheet" href="equipes.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Funcionários</a>
+            <a href="/equipes.html" class="nav-link active">Equipes</a>
+            <a href="/curriculos.html" class="nav-link">Currículos</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Gerenciamento de Equipes</h1>
+            <button id="btnNovaEquipe" class="btn-principal">Nova Equipe</button>
+        </header>
+
+        <!-- Seção de listagem de equipes -->
+        <div class="equipes-section">
+            <h2>Equipes Existentes</h2>
+            <div class="lista-equipes" id="listaEquipes">
+                <!-- Cards de equipes serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Modal para criar/editar equipe -->
+        <div id="equipesModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Nova Equipe</h2>
+                <form id="equipeForm">
+                    <div class="form-group">
+                        <label for="nomeEquipe">Nome da Equipe:</label>
+                        <input type="text" id="nomeEquipe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="liderEquipe">Líder da Equipe:</label>
+                        <select id="liderEquipe" required>
+                            <option value="">Selecione um líder</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Membros da Equipe (mínimo 5):</label>
+                        <div id="membrosEquipe" class="membros-container">
+                            <!-- Checkboxes serão inseridos aqui via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="membros-selecionados">
+                        <p>Membros selecionados: <span id="contadorMembros">0</span></p>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Salvar Equipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="equipes.js"></script>
+</body>
+</html>

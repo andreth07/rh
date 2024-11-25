@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Avaliações</title>
+    <link rel="stylesheet" href="avaliacoes.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Funcionários</a>
+            <a href="/equipes.html" class="nav-link">Equipes</a>
+            <a href="/curriculos.html" class="nav-link">Currículos</a>
+            <a href="/avaliacoes-lider.html" class="nav-link">Avaliação de Equipes</a>
+            <a href="/avaliacoes.html" class="nav-link active">Relatório de Avaliações</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Relatório de Avaliações</h1>
+            
+            <div class="filtros">
+                <select id="filtroMes">
+                    <option value="">Todos os meses</option>
+                </select>
+                <select id="filtroEquipe">
+                    <option value="">Todas as equipes</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="avaliacoes-lista" id="avaliacoesLista">
+            <!-- Avaliações serão inseridas aqui via JavaScript -->
+        </div>
+    </div>
+    <script src="avaliacoes-relatorio.js"></script>
+</body>
+</html>

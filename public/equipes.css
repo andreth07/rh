@@ -1,0 +1,347 @@
+:root {
+    --marrom-escuro: #5D4037;
+    --marrom-medio: #795548;
+    --marrom-claro: #A1887F;
+    --branco: #FFFFFF;
+    --bege-claro: #EFEBE9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bege-claro);
+    color: var(--marrom-escuro);
+}
+
+.nav-bar {
+    background-color: var(--marrom-escuro);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.nav-link {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--marrom-medio);
+}
+
+.nav-link.active {
+    background-color: var(--marrom-medio);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: var(--marrom-escuro);
+}
+
+.btn-principal {
+    padding: 12px 24px;
+    background-color: var(--marrom-medio);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-principal:hover {
+    background-color: var(--marrom-escuro);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: var(--branco);
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--marrom-medio);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--marrom-escuro);
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--marrom-claro);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.membros-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--marrom-claro);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.membro-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.membro-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.membros-selecionados {
+    margin: 10px 0;
+    color: var(--marrom-medio);
+}
+
+.lista-equipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.equipe-card {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--marrom-medio);
+}
+
+.equipe-card h3 {
+    color: var(--marrom-escuro);
+    margin-bottom: 15px;
+}
+
+.equipe-info {
+    margin: 10px 0;
+}
+
+.equipe-membros {
+    margin-top: 15px;
+}
+
+.equipe-membros ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.equipe-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-editar, .btn-excluir {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: var(--marrom-claro);
+    color: var(--branco);
+}
+
+.btn-excluir {
+    background-color: #D32F2F;
+    color: var(--branco);
+}
+
+.equipes-section {
+    margin-top: 30px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.equipes-section h2 {
+    color: var(--marrom-escuro);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--marrom-claro);
+}
+
+.lista-equipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.equipe-card {
+    background-color: var(--bege-claro);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--marrom-medio);
+    transition: transform 0.2s ease;
+}
+
+.equipe-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.equipe-card h3 {
+    color: var(--marrom-escuro);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.equipe-info {
+    margin: 10px 0;
+}
+
+.equipe-info p {
+    margin: 5px 0;
+    color: var(--marrom-medio);
+}
+
+.equipe-membros {
+    margin-top: 15px;
+}
+
+.equipe-membros ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.equipe-membros li {
+    padding: 5px 0;
+    color: var(--marrom-medio);
+    border-bottom: 1px solid var(--marrom-claro);
+}
+
+.equipe-membros li:last-child {
+    border-bottom: none;
+}
+
+.equipe-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--marrom-claro);
+}
+
+.btn-editar, .btn-excluir {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-editar {
+    background-color: var(--marrom-claro);
+    color: var(--branco);
+}
+
+.btn-editar:hover {
+    background-color: var(--marrom-medio);
+}
+
+.btn-excluir {
+    background-color: #D32F2F;
+    color: var(--branco);
+}
+
+.btn-excluir:hover {
+    background-color: #B71C1C;
+}
+
+/* Adicione um estado vazio para quando não houver equipes */
+.lista-equipes:empty::after {
+    content: "Nenhuma equipe cadastrada";
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    color: var(--marrom-medio);
+    font-style: italic;
+}
+
+.no-equipes {
+    text-align: center;
+    padding: 20px;
+    color: var(--marrom-medio);
+    font-style: italic;
+    background-color: var(--bege-claro);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #D32F2F;
+    background-color: #FFEBEE;
+    border-radius: 8px;
+    margin: 20px 0;
+}

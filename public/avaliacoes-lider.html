@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Equipes</title>
+    <link rel="stylesheet" href="avaliacoes.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Funcionários</a>
+            <a href="/equipes.html" class="nav-link">Equipes</a>
+            <a href="/curriculos.html" class="nav-link">Currículos</a>
+            <a href="/avaliacoes-lider.html" class="nav-link active">Avaliação de Equipes</a>
+            <a href="/avaliacoes.html" class="nav-link">Relatório de Avaliações</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Avaliação de Equipes</h1>
+        </header>
+
+        <div class="equipes-avaliacao">
+            <div class="selecao-equipe">
+                <label for="equipeSelect">Selecione sua Equipe:</label>
+                <select id="equipeSelect">
+                    <option value="">Escolha uma equipe...</option>
+                </select>
+            </div>
+
+            <div id="formAvaliacao" class="form-avaliacao" style="display: none;">
+                <h2>Avaliação Mensal</h2>
+                <form id="avaliacaoForm">
+                    <div class="form-group">
+                        <label for="melhorFuncionario">Melhor Funcionário (Ganhador da Cesta Básica):</label>
+                        <select id="melhorFuncionario" required>
+                            <option value="">Selecione o funcionário...</option>
+                        </select>
+                        <div class="motivo-group">
+                            <label for="motivoMelhor">Motivo da Escolha:</label>
+                            <textarea id="motivoMelhor" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="piorFuncionario">Funcionário que Precisa Melhorar:</label>
+                        <select id="piorFuncionario" required>
+                            <option value="">Selecione o funcionário...</option>
+                        </select>
+                        <div class="motivo-group">
+                            <label for="motivoPior">Pontos a Melhorar:</label>
+                            <textarea id="motivoPior" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mesAno">Mês/Ano da Avaliação:</label>
+                        <input type="month" id="mesAno" required>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Enviar Avaliação</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="avaliacoes-lider.js"></script>
+</body>
+</html>

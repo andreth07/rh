@@ -1,0 +1,89 @@
+:root {
+    --marrom-escuro: #5D4037;
+    --marrom-medio: #795548;
+    --marrom-claro: #A1887F;
+    --branco: #FFFFFF;
+    --bege-claro: #EFEBE9;
+    --verde-sucesso: #4CAF50;
+    --vermelho-alerta: #F44336;
+}
+
+/* ... (estilos base como no outros arquivos CSS) ... */
+
+.equipes-avaliacao {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.selecao-equipe {
+    margin-bottom: 30px;
+}
+
+.selecao-equipe select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--marrom-claro);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-avaliacao {
+    padding: 20px;
+    background-color: var(--bege-claro);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.motivo-group {
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid var(--marrom-claro);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.avaliacao-card {
+    background-color: var(--bege-claro);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--marrom-medio);
+}
+
+.melhor-funcionario {
+    color: var(--verde-sucesso);
+    padding: 10px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.pior-funcionario {
+    color: var(--vermelho-alerta);
+    padding: 10px;
+    background-color: rgba(244, 67, 54, 0.1);
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.avaliacao-info {
+    margin: 10px 0;
+    color: var(--marrom-medio);
+}
+
+.avaliacao-motivo {
+    font-style: italic;
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 2px solid var(--marrom-claro);
+}

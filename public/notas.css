@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    background-color: #333;
+    padding: 10px;
+}
+.nav-link {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    padding: 20px;
+}
+.notas-section {
+    margin-top: 20px;
+}
+.equipe-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.equipe-membro {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.nota-input {
+    width: 50px;
+}

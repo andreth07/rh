@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículos</title>
+    <link rel="stylesheet" href="curriculos.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Funcionários</a>
+            <a href="/equipes.html" class="nav-link">Equipes</a>
+            <a href="/curriculos.html" class="nav-link active">Currículos</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cadastro de Currículos</h1>
+        </header>
+
+        <!-- Formulário de cadastro -->
+        <div class="form-section">
+            <form id="curriculoForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cargoPretendido">Cargo Pretendido:</label>
+                    <input type="text" id="cargoPretendido" name="cargoPretendido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkCurriculo">Link do Currículo:</label>
+                    <input type="url" id="linkCurriculo" name="linkCurriculo" 
+                           placeholder="https://exemplo.com/curriculo" required>
+                </div>
+
+                <button type="submit" class="btn-principal">Cadastrar Currículo</button>
+            </form>
+        </div>
+
+        <!-- Lista de currículos -->
+        <div class="curriculos-section">
+            <h2>Currículos Cadastrados</h2>
+            <div class="lista-curriculos" id="listaCurriculos">
+                <!-- Cards de currículos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="curriculos.js"></script>
+</body>
+</html>
